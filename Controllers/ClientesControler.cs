@@ -103,5 +103,42 @@ public class ClientesController : Controller
 
         return View(cliente);
     }
+    public async Task<IActionResult> Delete(int? id)
+    {
+        if (id == null)
+        {
+            return NotFound();
+        }
 
+        var cliente = await _context.Clientes.FindAsync(id);
+
+        if (cliente == null)
+        {
+            return NotFound();
+        }
+
+        return View(cliente);
+    }
+
+    [HttpPost, ActionName("Delete")]
+    public async Task<IActionResult> DeleteConfirmed(int? id)
+    {
+        if (id == null)
+        {
+            return NotFound();
+        }
+
+        var cliente = await _context.Clientes.FindAsync(id);
+
+        if (cliente == null)
+        {
+            return NotFound();
+        }
+
+        _context.Clientes.Remove(cliente);
+        await _context.SaveChangesAsync();
+
+        // Redirecionar para a página inicial após a exclusão
+        return Redirect("/");
+    }
 }
