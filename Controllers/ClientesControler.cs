@@ -34,8 +34,57 @@ public class ClientesController : Controller
             return RedirectToAction("Create");
         }
         return View(cliente);
+    }
+    public async Task<IActionResult> Edit(int? id)
+    {
+        if (id == null)
+        {
+            return NotFound();
+        }
 
+        var cliente = await _context.Clientes.FindAsync(id);
 
+        if (cliente == null)
+        {
+            return NotFound();
+        }
+
+        return View(cliente);
+    }
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Telefone,Email")] Cliente cliente)
+    {
+        if (id != cliente.Id)
+        {
+            return NotFound();
+        }
+
+        if (ModelState.IsValid)
+        {
+            try
+            {
+                _context.Update(cliente);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ClienteExists(cliente.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+        }
+
+        return View(cliente);
+    }
+    private bool ClienteExists(int id)
+    {
+        return _context.Clientes.Any(e => e.Id == id);
     }
 }
-
