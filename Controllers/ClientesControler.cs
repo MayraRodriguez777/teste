@@ -87,4 +87,21 @@ public class ClientesController : Controller
     {
         return _context.Clientes.Any(e => e.Id == id);
     }
+    public async Task<IActionResult> Details(int? id)
+    {
+        if (id == null)
+        {
+            return NotFound();
+        }
+
+        var cliente = await _context.Clientes.FindAsync(id);
+
+        if (cliente == null)
+        {
+            return NotFound();
+        }
+
+        return View(cliente);
+    }
+
 }
