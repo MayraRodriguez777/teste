@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Eassydentalmvc.Migrations
+namespace WebApplication1.Migrations
 {
     public partial class AddClienteTable : Migration
     {

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Eassydentalmvc.Models
+namespace WebApplication1.Models
 {
     [Table("Dentista")]
     public class Dentista
@@ -27,3 +27,4 @@ namespace Eassydentalmvc.Models
         public string Endereço { get; set; }
     }
 }
+

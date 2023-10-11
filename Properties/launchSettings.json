@@ -1,13 +1,13 @@
 {
   "profiles": {
-    "Eassydentalmvc": {
+    "WebApplication1": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "https://localhost:7255;http://localhost:5196"
+      "applicationUrl": "https://localhost:7133;http://localhost:5229"
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -31,8 +31,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:49287",
-      "sslPort": 44395
+      "applicationUrl": "http://localhost:35169",
+      "sslPort": 44314
     }
   }
 }

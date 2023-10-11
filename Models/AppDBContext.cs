@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Eassydentalmvc.Models
+namespace WebApplication1.Models
 {
     public class AppDbContext : DbContext
     {

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eassydentalmvc", "Eassydentalmvc.csproj", "{68C3C39B-AF3E-4E2C-8F49-5AEEA8335005}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1.csproj", "{98F3FB67-A1AA-4523-A700-742DE1086107}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{68C3C39B-AF3E-4E2C-8F49-5AEEA8335005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{68C3C39B-AF3E-4E2C-8F49-5AEEA8335005}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{68C3C39B-AF3E-4E2C-8F49-5AEEA8335005}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{68C3C39B-AF3E-4E2C-8F49-5AEEA8335005}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98F3FB67-A1AA-4523-A700-742DE1086107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98F3FB67-A1AA-4523-A700-742DE1086107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98F3FB67-A1AA-4523-A700-742DE1086107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98F3FB67-A1AA-4523-A700-742DE1086107}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {8EA8A405-C322-4298-BEA5-5FB3BBFDE762}
+		SolutionGuid = {715FA2AA-1A40-4CC0-BD5E-022D65044175}
 	EndGlobalSection
 EndGlobal

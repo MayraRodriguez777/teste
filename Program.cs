@@ -1,4 +1,4 @@
-using Eassydentalmvc.Models;
+using WebApplication1.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
