@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using WebApplication2.Models;
 
-namespace WebApplication1.Models
+namespace WebApplication2.Models
 {
     public class AppDbContext : DbContext
     {
@@ -8,8 +10,10 @@ namespace WebApplication1.Models
         {
         }
 
-        public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<Dentista> Dentistas { get; set; }
+
+        public DbSet<UsuarioCliente> UsuariosClientes { get; set; }
+
+        public DbSet<UsuarioDentista> UsuariosDentistas { get; set; }
 
         // Outros DbSets para outras entidades, se houver
     }
