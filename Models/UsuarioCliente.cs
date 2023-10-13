@@ -1,5 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApplication2.Models
 {
@@ -9,16 +10,19 @@ namespace WebApplication2.Models
         [Key]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Obrigatorio informar o nome")]
+        [Required(ErrorMessage = "Obrigatório informar o nome")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage = "Obrigatorio informar o Telefone")]
-        public int Telefone { get; set; }
+        [Required(ErrorMessage = "Obrigatório informar o Telefone")]
+        public string Telefone { get; set; }
 
-        [Required(ErrorMessage = "Obrigatorio informar o E-mail")]
+        [Required(ErrorMessage = "Obrigatório informar o E-mail")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Obrigatorio informar a Senha")]
+        [Required(ErrorMessage = "Obrigatório informar a Senha")]
         public string Senha { get; set; }
+
+        // Propriedade de navegação para AgendaEventos
+        public ICollection<AgendaEvento> AgendaEventos { get; set; }
     }
 }

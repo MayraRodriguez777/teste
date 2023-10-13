@@ -9,22 +9,22 @@ using WebApplication2.Models;
 
 namespace WebApplication2.Controllers
 {
-    public class UsuarioDentistasController : Controller
+    public class UsuarioDentistas1Controller : Controller
     {
         private readonly AppDbContext _context;
 
-        public UsuarioDentistasController(AppDbContext context)
+        public UsuarioDentistas1Controller(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: UsuarioDentistas
+        // GET: UsuarioDentistas1
         public async Task<IActionResult> Index()
         {
               return View(await _context.UsuariosDentistas.ToListAsync());
         }
 
-        // GET: UsuarioDentistas/Details/5
+        // GET: UsuarioDentistas1/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.UsuariosDentistas == null)
@@ -42,19 +42,30 @@ namespace WebApplication2.Controllers
             return View(usuarioDentista);
         }
 
-        // GET: UsuarioDentistas/Create
+        // GET: UsuarioDentistas1/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: UsuarioDentistas/Create
+        // POST: UsuarioDentistas1/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Telefone,Email,CRO,Nome_da_clinica,Endereço,Senha")] UsuarioDentista usuarioDentista)
+        public async Task<IActionResult> Create([Bind("Id,Name,Telefone,Email,CRO,Nome_da_clinica,Endereço,Senha,Foto,FotoContentType,FotoFileName")] UsuarioDentista usuarioDentista, IFormFile foto)
         {
+            if (foto != null && foto.Length > 0)
+            {
+                using (var memoryStream = new MemoryStream())
+                {
+                    await foto.CopyToAsync(memoryStream);
+                    usuarioDentista.Foto = memoryStream.ToArray();
+                    usuarioDentista.FotoContentType = foto.ContentType;
+                    usuarioDentista.FotoFileName = foto.FileName;
+                }
+            }
+
             if (ModelState.IsValid)
             {
                 _context.Add(usuarioDentista);
@@ -64,7 +75,8 @@ namespace WebApplication2.Controllers
             return View(usuarioDentista);
         }
 
-        // GET: UsuarioDentistas/Edit/5
+
+        // GET: UsuarioDentistas1/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.UsuariosDentistas == null)
@@ -80,34 +92,42 @@ namespace WebApplication2.Controllers
             return View(usuarioDentista);
         }
 
-        // POST: UsuarioDentistas/Edit/5
+        // POST: UsuarioDentistas1/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-[ValidateAntiForgeryToken]
-public async Task<IActionResult> Create([Bind("Id,Name,Telefone,Email,CRO,Nome_da_clinica,Endereço,Senha,Foto,FotoContentType,FotoFileName")] UsuarioDentista usuarioDentista, IFormFile foto)
-{
-    if (foto != null && foto.Length > 0)
-    {
-        using (var memoryStream = new MemoryStream())
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Telefone,Email,CRO,Nome_da_clinica,Endereço,Senha,Foto,FotoContentType,FotoFileName")] UsuarioDentista usuarioDentista)
         {
-            await foto.CopyToAsync(memoryStream);
-            usuarioDentista.Foto = memoryStream.ToArray();
-            usuarioDentista.FotoContentType = foto.ContentType;
-            usuarioDentista.FotoFileName = foto.FileName;
+            if (id != usuarioDentista.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(usuarioDentista);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!UsuarioDentistaExists(usuarioDentista.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(usuarioDentista);
         }
-    }
 
-    if (ModelState.IsValid)
-    {
-        _context.Add(usuarioDentista);
-        await _context.SaveChangesAsync();
-        return RedirectToAction(nameof(Index));
-    }
-    return View(usuarioDentista);
-}
-
-        // GET: UsuarioDentistas/Delete/5
+        // GET: UsuarioDentistas1/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.UsuariosDentistas == null)
@@ -125,7 +145,7 @@ public async Task<IActionResult> Create([Bind("Id,Name,Telefone,Email,CRO,Nome_d
             return View(usuarioDentista);
         }
 
-        // POST: UsuarioDentistas/Delete/5
+        // POST: UsuarioDentistas1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

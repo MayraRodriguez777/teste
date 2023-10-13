@@ -7,6 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\UsuarioDentistas1\**" />
+    <Content Remove="Views\UsuarioDentistas1\**" />
+    <EmbeddedResource Remove="Views\UsuarioDentistas1\**" />
+    <None Remove="Views\UsuarioDentistas1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\UsuarioDentistas1Controller.cs" />
+    <Compile Remove="Controllers\UsuarioDentistasController.cs" />
+    <Compile Remove="Migrations\20231013092610_AddUsuarioDentista.cs" />
+    <Compile Remove="Migrations\20231013092610_AddUsuarioDentista.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="6.0.23" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.23" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.23">
