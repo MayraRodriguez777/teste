@@ -16,6 +16,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\josem\OneDrive\Desktop\WebApplication2
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/AgendaEventoes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhRXZlbnRvZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/AgendaEventoes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhRXZlbnRvZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/AgendaEventoes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhRXZlbnRvZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/AgendaEventoes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhRXZlbnRvZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/AgendaEventoes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhRXZlbnRvZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,24 +72,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0NsaWVudGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioDentistas/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0RlbnRpc3Rhc1xDcmVhdGUuY3NodG1s
+[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioDentistas2/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0RlbnRpc3RhczJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioDentistas/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0RlbnRpc3Rhc1xEZWxldGUuY3NodG1s
+[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioDentistas2/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0RlbnRpc3RhczJcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioDentistas/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0RlbnRpc3Rhc1xEZXRhaWxzLmNzaHRtbA==
+[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioDentistas2/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0RlbnRpc3RhczJcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioDentistas/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0RlbnRpc3Rhc1xFZGl0LmNzaHRtbA==
+[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioDentistas2/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0RlbnRpc3RhczJcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioDentistas/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0RlbnRpc3Rhc1xJbmRleC5jc2h0bWw=
+[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioDentistas2/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0RlbnRpc3RhczJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/_ViewImports.cshtml]
