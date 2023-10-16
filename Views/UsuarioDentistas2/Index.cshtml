@@ -1,83 +1,73 @@
 ﻿@model IEnumerable<WebApplication2.Models.UsuarioDentista>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Dentistas";
 }
 
-<h1>Index</h1>
+<main role="main">
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Telefone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CRO)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Especialidade)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome_da_clinica)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Endereço)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Senha)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Foto)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telefone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CRO)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Especialidade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome_da_clinica)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Endereço)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Senha)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Foto)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/imginicial2.jpg" class="d-block w-100" alt="">
+                <div class="carousel-caption text-start">
+                    <h1>Agende sua consulta sem sair de casa</h1>
+                    <p></p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Conheça os nossos dentista cadastrados</a></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/img/imginicial1.jpg" class="d-block w-100" alt="Second Slide">
+                <div class="carousel-caption">
+                    <h1>Cadastre Agora.</h1>
+                    <p></p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/img/imginicial3.jpg" class="d-block w-100" alt="Second Slide">
+                <div class="carousel-caption">
+                    <h1>Cadastre Agora.</h1>
+                    <p></p>
+                    <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                </div>
+            </div>
+            <!-- Adicione mais slides de carrossel conforme necessário -->
+        </div>
+    </div>
+
+</main>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+
+        <div class="row">
+            @foreach (var dentista in Model)
+            {
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="@dentista.Foto" class="card-img-top" alt="Foto do Dentista">
+                        <div class="card-body">
+                            <h5 class="card-title">@dentista.Name</h5>
+                            <p class="card-text">
+                                <strong>Telefone:</strong> @dentista.Telefone <br />
+                                <strong>Email:</strong> @dentista.Email <br />
+                                <strong>CRO:</strong> @dentista.CRO <br />
+                                <strong>Especialidade:</strong> @dentista.Especialidade <br />
+                                <strong>Nome da Clínica:</strong> @dentista.Nome_da_clinica <br />
+                                <strong>Endereço:</strong> @dentista.Endereço
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <!-- Adicione links de ação aqui, por exemplo: -->
+                                    <!-- <a asp-action="Edit" asp-route-id="@dentista.Id" class="btn btn-sm btn-outline-secondary">Editar</a> -->
+                                    <!-- <a asp-action="Delete" asp-route-id="@dentista.Id" class="btn btn-sm btn-outline-danger">Excluir</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</>
