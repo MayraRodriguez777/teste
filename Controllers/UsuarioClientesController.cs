@@ -6,6 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WebApplication2.Models;
+using BCrypt.Net;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace WebApplication2.Controllers
 {
@@ -19,9 +23,57 @@ namespace WebApplication2.Controllers
         }
 
         // GET: UsuarioClientes
+
         public async Task<IActionResult> Index()
         {
               return View(await _context.UsuariosClientes.ToListAsync());
+
+        }
+
+        public IActionResult Login ()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Login(string email, string senha)
+        {
+            var usuario = await _context.UsuariosClientes.FirstOrDefaultAsync(u => u.Email == email);
+
+            if (usuario != null && BCrypt.Net.BCrypt.Verify(senha, usuario.Senha))
+            {
+                var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Name, usuario.Name),
+            new Claim(ClaimTypes.NameIdentifier, usuario.Email.ToString())
+        };
+
+                var usuarioIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                ClaimsPrincipal principal = new ClaimsPrincipal(usuarioIdentity);
+                var props = new AuthenticationProperties
+                {
+                    AllowRefresh = true,
+                    ExpiresUtc = DateTime.UtcNow.AddHours(8),
+                    IsPersistent = true,
+                };
+
+                await HttpContext.SignInAsync(principal, props);
+                return Redirect("/");
+            }
+            else
+            {
+                ViewBag.Message = "Email e/ou senha inválidos!";
+                return View();
+            }
+        }
+
+
+
+
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Login", "UsuarioClientes");
+
         }
 
         // GET: UsuarioClientes/Details/5
@@ -57,6 +109,7 @@ namespace WebApplication2.Controllers
         {
             if (ModelState.IsValid)
             {
+                usuarioCliente.Senha = BCrypt.Net.BCrypt.HashPassword(usuarioCliente.Senha);
                 _context.Add(usuarioCliente);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -96,6 +149,7 @@ namespace WebApplication2.Controllers
             {
                 try
                 {
+                    usuarioCliente.Senha = BCrypt.Net.BCrypt.HashPassword(usuarioCliente.Senha);
                     _context.Update(usuarioCliente);
                     await _context.SaveChangesAsync();
                 }

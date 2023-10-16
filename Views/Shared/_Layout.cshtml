@@ -33,10 +33,24 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="@Url.Action("Create", "UsuarioClientes")" class="btn btn-primary">Entrar</a>
+                            <a href="@Url.Action("Create", "UsuarioClientes")" class="btn btn-primary">Criar</a>
 
-                        </li>
-                    </ul>
+                        <li>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                            <li class="nav-item">
+                                Olá @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="UsuarioClientes" asp-action="Logout">Sair</a>
+                            </li>
+                                }
+                                else
+                                {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="UsuarioClientes" asp-action="Login">Login</a>
+                            </li>
+                                }
+
+                        <</ul>>
+                
                 </div>
             </div>
         </nav>

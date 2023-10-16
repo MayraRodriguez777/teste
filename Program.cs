@@ -1,5 +1,8 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using WebApplication2.Models;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +11,21 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
 builder.Services.AddDbContext<AppDbContext>(Options => Options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnections")));
+
+
+builder.Services.Configure<CookiePolicyOptions>(Options =>
+{
+    Options.CheckConsentNeeded = context => true;
+    Options.MinimumSameSitePolicy = SameSiteMode.None;
+});
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+   .AddCookie(options => {
+       options.AccessDeniedPath = "/UsuarioClientes/AccessDenied/";
+       options.LoginPath = "/UsuarioClientes/login/";
+   });
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -23,6 +41,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -23,7 +26,45 @@ namespace WebApplication2.Controllers
         {
               return View(await _context.UsuariosDentistas.ToListAsync());
         }
+        [HttpPost]
+        public async Task<IActionResult> Login(string email, string senha)
+        {
+            var usuario = await _context.UsuariosDentistas.FirstOrDefaultAsync(u => u.Email == email);
 
+            if (usuario != null && BCrypt.Net.BCrypt.Verify(senha, usuario.Senha))
+            {
+                var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.Name, usuario.Name),
+            new Claim(ClaimTypes.NameIdentifier, usuario.Email.ToString())
+        };
+
+                var usuarioIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                ClaimsPrincipal principal = new ClaimsPrincipal(usuarioIdentity);
+                var props = new AuthenticationProperties
+                {
+                    AllowRefresh = true,
+                    ExpiresUtc = DateTime.UtcNow.AddHours(8),
+                    IsPersistent = true,
+                };
+
+                await HttpContext.SignInAsync(principal, props);
+                return Redirect("/");
+            }
+            else
+            {
+                ViewBag.Message = "Email e/ou senha inválidos!";
+                return View();
+            }
+        }
+
+
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Login", "UsuariosDentistas");
+
+        }
         // GET: UsuarioDentistas2/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -57,6 +98,7 @@ namespace WebApplication2.Controllers
         {
             if (ModelState.IsValid)
             {
+                usuarioDentista.Senha = BCrypt.Net.BCrypt.HashPassword(usuarioDentista.Senha);
                 _context.Add(usuarioDentista);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -96,6 +138,7 @@ namespace WebApplication2.Controllers
             {
                 try
                 {
+                    usuarioDentista.Senha = BCrypt.Net.BCrypt.HashPassword(usuarioDentista.Senha);
                     _context.Update(usuarioDentista);
                     await _context.SaveChangesAsync();
                 }

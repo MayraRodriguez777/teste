@@ -9,97 +9,105 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebApplication2
 build_property.RootNamespace = WebApplication2
-build_property.ProjectDir = C:\Users\josem\OneDrive\Desktop\WebApplication2\
+build_property.ProjectDir = C:\Users\josem\OneDrive\Documentos\GitHub\Eassydentalmvc\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\josem\OneDrive\Desktop\WebApplication2
+build_property.MSBuildProjectDirectory = C:\Users\josem\OneDrive\Documentos\GitHub\Eassydentalmvc
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/AgendaEventoes/Create.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/AgendaEventoes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhRXZlbnRvZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/AgendaEventoes/Delete.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/AgendaEventoes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhRXZlbnRvZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/AgendaEventoes/Details.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/AgendaEventoes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhRXZlbnRvZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/AgendaEventoes/Edit.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/AgendaEventoes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhRXZlbnRvZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/AgendaEventoes/Index.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/AgendaEventoes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdlbmRhRXZlbnRvZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/Home/Index.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/Home/Privacy.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/Shared/Error.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioClientes/Create.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/UsuarioClientes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0NsaWVudGVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioClientes/Delete.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/UsuarioClientes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0NsaWVudGVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioClientes/Details.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/UsuarioClientes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0NsaWVudGVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioClientes/Edit.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/UsuarioClientes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0NsaWVudGVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioClientes/Index.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/UsuarioClientes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0NsaWVudGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioDentistas2/Create.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/UsuarioClientes/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0NsaWVudGVzXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/UsuarioDentistas2/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0RlbnRpc3RhczJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioDentistas2/Delete.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/UsuarioDentistas2/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0RlbnRpc3RhczJcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioDentistas2/Details.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/UsuarioDentistas2/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0RlbnRpc3RhczJcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioDentistas2/Edit.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/UsuarioDentistas2/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0RlbnRpc3RhczJcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/UsuarioDentistas2/Index.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/UsuarioDentistas2/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0RlbnRpc3RhczJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/_ViewImports.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/UsuarioDentistas2/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb0RlbnRpc3RhczJcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/_ViewStart.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/josem/OneDrive/Desktop/WebApplication2/Views/Shared/_Layout.cshtml]
+[C:/Users/josem/OneDrive/Documentos/GitHub/Eassydentalmvc/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-amt9qciysm
