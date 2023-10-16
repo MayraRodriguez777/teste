@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sHnPBrCkbR6Rub/HTeFiomzAVE4WYN5xUKs4XX+Z84A=",
+  "Hash": "pmpAvh2bEnfHxBuhIxca4WBd1ABebXNVWFqhouhq2Xk=",
   "Source": "WebApplication2",
   "BasePath": "_content/WebApplication2",
   "Mode": "Default",
@@ -202,6 +202,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\imginicial2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\josem\\OneDrive\\Documentos\\GitHub\\Eassydentalmvc\\wwwroot\\img\\imginicial3 .jpg",
+      "SourceId": "WebApplication2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\josem\\OneDrive\\Documentos\\GitHub\\Eassydentalmvc\\wwwroot\\",
+      "BasePath": "_content/WebApplication2",
+      "RelativePath": "img/imginicial3 .jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\imginicial3 .jpg"
     },
     {
       "Identity": "C:\\Users\\josem\\OneDrive\\Documentos\\GitHub\\Eassydentalmvc\\wwwroot\\img\\imginicial3.jpg",

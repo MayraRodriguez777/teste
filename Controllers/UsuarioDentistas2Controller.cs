@@ -22,10 +22,18 @@ namespace WebApplication2.Controllers
         }
 
         // GET: UsuarioDentistas2
+
         public async Task<IActionResult> Index()
         {
               return View(await _context.UsuariosDentistas.ToListAsync());
+
+
         }
+        public IActionResult Login()
+        {
+            return View();
+        }
+
         [HttpPost]
         public async Task<IActionResult> Login(string email, string senha)
         {
@@ -62,7 +70,7 @@ namespace WebApplication2.Controllers
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
-            return RedirectToAction("Login", "UsuariosDentistas");
+            return RedirectToAction("Login", "UsuariosDentistas2");
 
         }
         // GET: UsuarioDentistas2/Details/5
