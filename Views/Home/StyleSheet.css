@@ -1,0 +1,9 @@
+﻿
+.imagem-pequena {
+    max-width: 100px; /* Defina o tamanho máximo da largura da imagem */
+    height: auto; /* A altura será ajustada automaticamente para manter a proporção */
+}
+
+.texto1 {
+    padding: 10 ;
+}
