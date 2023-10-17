@@ -32,6 +32,11 @@
                 <input asp-for="Senha" class="form-control" />
                 <span asp-validation-for="Senha" class="text-danger"></span>
             </div>
+            <div class="col-md-3 d-none d-md-block">
+                <!-- A classe d-none oculta a imagem em telas pequenas, d-md-block faz com que ela apareça em telas médias e maiores -->
+                <img src="./img/img3.jpg" class="" alt="Imagem">
+            </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
                 <a href="@Url.Action("Create", "UsuarioDentistas2")" class="btn btn-secondary">Cadastro Dentista</a>
@@ -45,10 +50,6 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
-<div class="col-md-6 d-none d-md-block">
-    <!-- A classe d-none oculta a imagem em telas pequenas, d-md-block faz com que ela apareça em telas médias e maiores -->
-    <img src="./img/img3.jpg" class="" alt="Imagem">
-</div>
 
 
 @section Scripts {
