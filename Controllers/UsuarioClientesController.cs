@@ -10,6 +10,7 @@ using BCrypt.Net;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using NuGet.Protocol.Plugins;
 
 namespace WebApplication2.Controllers
 {
@@ -57,7 +58,7 @@ namespace WebApplication2.Controllers
                 };
 
                 await HttpContext.SignInAsync(principal, props);
-                return Redirect("/");
+                return Redirect(Url.Action("Create", "AgendaEventoes"));
             }
             else
             {

@@ -57,7 +57,7 @@ namespace WebApplication2.Controllers
                 };
 
                 await HttpContext.SignInAsync(principal, props);
-                return Redirect("/");
+                return Redirect(Url.Action("Index", "AgendaEventoes"));
             }
             else
             {

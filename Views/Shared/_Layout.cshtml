@@ -27,8 +27,16 @@
                             <a class="nav-link" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="@Url.Action("Create","AgendaEventoes")">Agendar</a>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <a class="nav-link" href="@Url.Action("Create", "AgendaEventoes")">Agendar</a>
+                            }
+                            else
+                            {
+                                <a class="nav-link" href="@Url.Action("Login", "UsuarioClientes")">Agendar</a>
+                            }
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="@Url.Action("Index","UsuarioDentistas2")">Dentista</a>
                         </li>
