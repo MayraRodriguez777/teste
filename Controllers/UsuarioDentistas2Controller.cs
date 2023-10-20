@@ -25,7 +25,7 @@ namespace WebApplication2.Controllers
 
         public async Task<IActionResult> Index()
         {
-              return View(await _context.UsuariosDentistas.ToListAsync());
+            return View(await _context.UsuariosDentistas.ToListAsync());
 
 
         }
@@ -198,16 +198,17 @@ namespace WebApplication2.Controllers
             {
                 _context.UsuariosDentistas.Remove(usuarioDentista);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool UsuarioDentistaExists(int id)
         {
-          return _context.UsuariosDentistas.Any(e => e.Id == id);
+            return _context.UsuariosDentistas.Any(e => e.Id == id);
         }
     }
 
 
 }
+

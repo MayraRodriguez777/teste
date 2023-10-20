@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
-builder.Services.AddDbContext<AppDbContext>(Options => Options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnections")));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer("Server=tcp:eassydentalmvcdbserver.database.windows.net,1433;Initial Catalog=Eassydentalmvc_db;Persist Security Info=False;User ID=mayra;Password=1234567A.;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
 
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {

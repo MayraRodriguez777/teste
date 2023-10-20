@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DyFUXKtmN5M0TJ+OsqhsWcHXKebiKNUcmfzZ9ZCbnQUSwM7gAMJEkiCtYRy8Osv1Yrfqe1VLrM6h0vlwlDcA+A==",
+  "dgSpecHash": "nhn2iY60sqEVUVfCNtWnMhWuPsINxN2/ftWvVj8cFPP8ACMV9THG3yi4HV/mNryr3RL8063FzohaDv3YZuv/zQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\josem\\OneDrive\\Documentos\\GitHub\\Eassydentalmvc\\WebApplication2.csproj",
+  "projectFilePath": "C:\\Users\\josem\\OneDrive\\Desktop\\WebApplication2\\WebApplication2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\josem\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\josem\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",

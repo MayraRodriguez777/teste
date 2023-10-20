@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2023-10-20T12:52:10.3274876Z"
+    },
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2023-10-19T18:12:06.5265396Z"
+    },
+    "sqlite1": {
+      "restored": true,
+      "restoreTime": "2023-10-19T22:10:45.0154415Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "1b12f943-5410-4cca-859d-355adba28762"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "Eassydentalmvc20231011110735ResourceGroup"
+    }
+  }
+}
